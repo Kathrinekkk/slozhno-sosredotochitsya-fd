@@ -100,7 +100,7 @@
   display:grid;
   width:100%;
   height:100%;
-  gap:10px; 
+  gap:10px;
 }
 
 .header__theme-menu-item {
@@ -280,32 +280,46 @@
 }
 
 @media(width>=768px) {
+
   .header__theme-title {
     font-size:120px;
     text-wrap:nowrap;
     width:min(576.84px, 100%);
     justify-self:start;
     align-self: end;
-    margin-top:115px;
+    margin-top:105px;
   }
 
   .decorated-zone::after {
-    margin-left:20px;
-    margin-bottom:20px;
+    margin-left:10px;
+    margin-bottom:10px;
   }
 
   .header__theme-menu {
-    margin-top:105px;
+    margin-top:115px;
   }
 
   .header__theme-description {
     justify-self: end;
-    margin-bottom: 183px;
+    margin-bottom: 174px;
     max-width:364px;
   }
 
   .header {
     min-height:1024px;
+    padding-right:20px;
+    padding-left:0;
+  }
+
+  .header .decorated-element {
+    padding:0;
+    margin-right:20px;
+    margin-top:20px;
+  }
+
+  .decorated-zone::before {
+    margin-right:10px;
+    margin-top:10px;
   }
 
   .focus {
@@ -316,7 +330,7 @@
     padding-right:0;
   }
 
-  .section__title {  
+  .section__title {
     max-width:236px;
   }
 
@@ -336,8 +350,9 @@
   }
 
   .main__sections {
-    padding-right:10px;
-    padding-left:20px;
+    padding-top:10px;
+    padding-right:20px;
+    padding-left:10px;
     gap:80px;
   }
 
@@ -357,6 +372,7 @@
     padding-bottom:70px;
     padding-right:0;
     gap:20px;
+    padding-left:10px;
   }
 
   .gallery-cards {
@@ -377,25 +393,11 @@
     object-fit:cover;
   }
 
-  .sunset { 
-    grid-area: sunset; 
-  }
-
-  .ice { 
-    grid-area: ice; 
-  }
-
-  .tape { 
-    grid-area: tape; 
-  }
-
-  .books { 
-    grid-area: books; 
-  }
-
-  .street { 
-    grid-area: street; 
-  }
+  .sunset { grid-area: sunset;}
+  .ice { grid-area: ice;}
+  .tape { grid-area: tape; }
+  .books { grid-area: books; }
+  .street { grid-area: street; }
 
   .footer {
     min-height:1024px;
@@ -406,7 +408,14 @@
 
   .footer-title {
     height:99px;
-    margin-left:15px;
+    margin-bottom:20px;
+  }
+
+  .footer.decorated-zone::before {
+    margin-top:0;
+  }
+
+  .footer.decorated-zone::after {
     margin-bottom:20px;
   }
 }
@@ -482,6 +491,9 @@
 
   .main__sections {
     min-height:3352px;
+    padding-top:0;
+    padding-left:20px;
+    padding-right:10px;
   }
 
   .focus {
@@ -490,7 +502,7 @@
     gap:19px;
   }
 
-  .section__title {  
+  .section__title {
     max-width:314.96px;
   }
 
@@ -563,6 +575,7 @@
     justify-content: center;
     align-items: center;
     position:relative;
+    height:100vh;
   }
 
   .footer-title {

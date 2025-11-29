@@ -42,7 +42,7 @@ a {
 .page {
   margin:0;
   max-width: 100%;
-  overflow-x:hidden;
+  overflow-x: hidden;
   background-image: var(--background_image);
   background-position: center;
   background-size: cover;
@@ -58,22 +58,17 @@ a {
 }
 
 .header.decorated-zone {
-  position: relative;  
+  position: relative;
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  border: 1px solid var(--button-color);
-}
-
-.header__theme-menu-button_active:active {
-  border: 1px solid var(--button-color);
-  background-color: var(--button-color);
+  outline: 1px solid var(--button-color);
 }
 
 .header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--button-color);
-  outline: none; 
+  outline: none;
 }
 
 .header__theme-menu-button:hover {
