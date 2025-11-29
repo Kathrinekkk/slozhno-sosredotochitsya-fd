@@ -393,11 +393,25 @@
     object-fit:cover;
   }
 
-  .sunset { grid-area: sunset;}
-  .ice { grid-area: ice;}
-  .tape { grid-area: tape; }
-  .books { grid-area: books; }
-  .street { grid-area: street; }
+  .sunset {
+    grid-area: sunset;
+  }
+
+  .ice {
+    grid-area: ice;
+  }
+
+  .tape {
+    grid-area: tape;
+  }
+
+  .books {
+    grid-area: books;
+  }
+  
+  .street {
+    grid-area: street;
+  }
 
   .footer {
     min-height:1024px;
@@ -575,7 +589,6 @@
     justify-content: center;
     align-items: center;
     position:relative;
-    height:100vh;
   }
 
   .footer-title {
