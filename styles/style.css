@@ -14,10 +14,6 @@
   background-color:var(--background-color);
 }
 
-.section__link {
-  text-shadow: 3px 2px 0 var(--accent-color);
-}
-
 .decorated-zone::before,
 .decorated-zone::after {
   content: '';
@@ -344,10 +340,15 @@
     padding-right:0;
   }
 
+  .section__title {
+    max-width:min(236px, 100%);
+    block-size:70px;
+  }
+
   .attention {
     margin-left:10px;
     padding-left:0;
-    padding-right:0;
+    padding-right:10px;
   }
   
   .attention__description {
@@ -427,10 +428,12 @@
 
   .footer.decorated-zone::before {
     margin-top:0;
+    margin-right:10px;
   }
 
   .footer.decorated-zone::after {
     margin-bottom:20px;
+    margin-left:10px;
   }
 }
 
