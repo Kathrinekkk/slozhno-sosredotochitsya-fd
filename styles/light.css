@@ -10,10 +10,7 @@
   --title_decor-color:#000028;
   --button-hover-color:rgba(53, 52, 48, 0.4);
   --text-button-color:#353430;
-}
-
-.section__link {
-  text-shadow: 3px 2px 0 var(--accent-color);
+  --text-size:clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
 
 .theme-light .decorated-element {
@@ -35,8 +32,9 @@
     --paragraf-color:#353430;
     --decor-color:#353430;
     --title_decor-color:#000028;
-    --button-hover-color:rgba(53, 52, 48, 0.4);
+    --button-hover-color:rgba(50, 49, 45, 0.4);
     --text-button-color:#353430;
+    --text-size:clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
   .theme-auto .decorated-element {

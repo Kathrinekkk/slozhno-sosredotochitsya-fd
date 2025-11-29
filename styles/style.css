@@ -4,6 +4,58 @@
   min-block-size:668px;
 }
 
+.page {
+  margin:0;
+  max-width: 100%;
+  background-image: var(--background_image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color:var(--background-color);
+}
+
+.section__link {
+  text-shadow: 3px 2px 0 var(--accent-color);
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  width: 25.04px;
+  height: 25px;
+}
+
+.header.decorated-zone {
+  position: relative;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  outline: 1px solid var(--button-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--button-color);
+  outline: none;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-hover-color);
+}
+
+.section__link:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.section__link:focus {
+  outline: none;
+}
+
+.section__link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
 .decorated-zone {
   padding:10px;
   display:grid;
@@ -52,7 +104,7 @@
 
 .header__theme-menu {
   width:70px;
-  height:98px;
+  max-height:98px;
   display:grid;
   grid-row:1;
   justify-self:end;
@@ -69,8 +121,7 @@
   font-weight:700;
   text-shadow: 4px 4px 0 var(--accent-color);
   font-family: var(--main-font);
-  font-size:clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  height:192px;
+  font-size:var(--text-size);
   width:355px;
   justify-self: center;
   align-self:center;
@@ -91,7 +142,6 @@
   justify-self: center;
   align-self: end;
   text-align: left;
-  height:117px;
   margin-bottom: 55px;
   max-width:355px;
   white-space:pre-line;
@@ -139,14 +189,17 @@
   font-weight:400;
 }
 
-.focus {
+.section {
   width:100%;
+  display:flex;
   padding-right:10px;
   padding-left:10px;
-  display:flex;
-  gap:20px;
-  padding-top:40px;
   flex-direction:column;
+  gap:20px;
+}
+
+.focus {
+  padding-top:40px;
 }
 
 .focus__description {
@@ -167,15 +220,6 @@
   font-weight: 700;
 }
 
-.attention {
-  width:100%;
-  padding-right:10px;
-  padding-left:10px;
-  display:flex;
-  gap:20px;
-  flex-direction:column;
-}
-
 .attention__description {
   display:flex;
   gap:20px;
@@ -183,31 +227,10 @@
   text-align: left;
 }
 
-.attention__food {
+.attention__card {
   display:flex;
   gap:10px;
   flex-direction: column;
-}
-
-.attention__multi {
-  display:flex;
-  gap:10px;
-  flex-direction: column;
-}
-
-.attention__gadjets {
-  display:flex;
-  gap:10px;
-  flex-direction: column;
-}
-
-.advices {
-  width:100%;
-  padding-right:10px;
-  padding-left:10px;
-  display:flex;
-  gap:20px;
-  flex-direction:column;
 }
 
 .advices__content {
@@ -217,9 +240,7 @@
 }
 
 .advices__content-text {
-  display:flex;
   gap:10px;
-  flex-direction:column;
 }
 
 .title-decor-advices {
@@ -234,10 +255,6 @@
 
 .gallery {
   background-color:var(--background-color);
-  width:100%;
-  padding-right:10px;
-  padding-left:10px;
-  display:flex;
   gap:10px;
   flex-direction:column;
   padding-bottom:40px;
@@ -273,8 +290,7 @@
   font-weight:700;
   text-shadow: 2px 2px 0 var(--accent-color);
   font-family: var(--main-font);
-  font-size:clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  height:96px;
+  font-size:var(--text-size);
   text-align: center;
 }
 
@@ -285,23 +301,22 @@
     text-wrap:nowrap;
     width:min(576.84px, 100%);
     justify-self:start;
-    align-self: end;
-    margin-top:105px;
+    margin-top:120px;
   }
 
-  .decorated-zone::after {
+  .header.decorated-zone::after {
     margin-left:10px;
     margin-bottom:10px;
   }
 
   .header__theme-menu {
-    margin-top:115px;
+    margin-top:70px;
   }
 
   .header__theme-description {
     justify-self: end;
     margin-bottom: 174px;
-    max-width:364px;
+    max-width: min(364px, 50%);
   }
 
   .header {
@@ -310,35 +325,26 @@
     padding-left:0;
   }
 
-  .header .decorated-element {
+  .header.decorated-element {
     padding:0;
     margin-right:20px;
     margin-top:20px;
   }
 
-  .decorated-zone::before {
+  .header.decorated-zone::before {
     margin-right:10px;
     margin-top:10px;
   }
 
   .focus {
     display:grid;
-    grid-template-columns: 1fr max-content;
+    grid-template-columns: minmax(236px, 1fr) 2fr;
     gap:20px;
     padding-top:50px;
     padding-right:0;
   }
 
-  .section__title {
-    max-width:236px;
-  }
-
-  .focus__description {
-    max-width:472px;
-  }
-
   .attention {
-    max-width:728px;
     margin-left:10px;
     padding-left:0;
     padding-right:0;
@@ -358,12 +364,8 @@
   .advices {
     display:grid;
     gap:20px;
-    grid-template-columns: 1fr max-content;
+    grid-template-columns: minmax(236px, 1fr) 2fr;
     padding-right:0;
-  }
-
-  .advices__content {
-    max-width:472px;
   }
 
   .gallery {
@@ -420,7 +422,6 @@
   }
 
   .footer-title {
-    height:99px;
     margin-bottom:20px;
   }
 
@@ -444,8 +445,7 @@
   }
 
   .header__theme-description {
-    max-width:491px;
-    max-height: 71px;
+    max-width:min(491px,100%);
     margin-right:20px;
     margin-bottom:134px;
   }
@@ -455,7 +455,6 @@
     margin:0;
     text-wrap:nowrap;
     width:min(759px, 100%);
-    max-height:130px;
     text-align:left;
     padding:0;
   }
@@ -503,7 +502,6 @@
   }
 
   .main__sections {
-    min-height:3352px;
     padding-top:0;
     padding-left:20px;
     padding-right:10px;
@@ -520,7 +518,7 @@
   }
 
   .focus__description {
-    min-width:649px;
+    min-width:auto;
     margin-right:10px;
     padding:0;
   }
@@ -532,27 +530,20 @@
   .attention {
     min-width:1004px;
     margin-left:0;
+    padding-right:15px;
   }
 
   .attention__description {
-    gap:20px;
-    flex-direction: row;
-    text-align: left;
-    width:984px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+    gap: 20px;
+    width: 100%;
   }
 
-  .attention__food {
-    margin-bottom:70px;
-    text-align: left;
-  }
-
-  .attention__multi {
-    max-width:315px;
-    margin-bottom:47px;
-  }
-
-  .attention__gadjets {
-    max-width: 315px;
+  .attention__card {
+    flex: 1 1 1;
+    min-width: 315px;
+    margin-bottom: 0;
   }
 
   .advices {
@@ -561,15 +552,14 @@
   }
 
   .advices__content {
-    max-width:649px;
+    max-width:auto;
   }
 
   .gallery {
-    width:984px;
+    width:100%;
     padding-left: 0px;
     margin-right:20px;
     padding-bottom: 0;
-    height:1091px;
   }
 
   .gallery-cards {
@@ -591,7 +581,6 @@
   }
 
   .footer-title {
-    height:130px;
     font-size:157px;
     margin-top:319px;
     margin-left:0;
