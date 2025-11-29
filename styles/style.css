@@ -513,7 +513,7 @@
   .focus {
     padding-top:60px;
     padding-left:0;
-    gap:19px;
+    gap:0;
   }
 
   .section__title {
@@ -534,6 +534,7 @@
     min-width:1004px;
     margin-left:0;
     padding-right:15px;
+    gap:0;
   }
 
   .attention__description {
@@ -552,6 +553,7 @@
   .advices {
     padding-left:0;
     padding-right:10px;
+    gap:10px;
   }
 
   .advices__content {
@@ -561,7 +563,7 @@
   .gallery {
     width:100%;
     padding-left: 0px;
-    margin-right:20px;
+    padding-right:10px;
     padding-bottom: 0;
   }
 

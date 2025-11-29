@@ -1,13 +1,15 @@
 :root.theme-dark {
-  --title-color: #DB00FF;
+  --background_image: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
+  --button-color:#ff0070;
+  --button-hover-color:rgba(255, 0, 112, 0.4);
+  --main-font:'IBM Plex Mono', sans-serif;
+  --title-color: #DB00FF;
   --background-color:#000028;
   --text-color:#F1B2CE;
-  --background_image: url(../images/cover-image-dark.png);
   --paragraf-color:#ff0070;
   --decor-color:#ff0070;
   --title_decor-color:#000028;
-  --button-color:#ff0070;
   --text-button-color:#ff0070;
   --text-size:clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
